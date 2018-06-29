@@ -1,4 +1,6 @@
-
+body {
+	background-color: #95a8db;
+}
 #header {
 	color: #201cf2;
 	text-align: center;
@@ -19,6 +21,7 @@
 	max-width: 320px;
 	width: 100%;
 	height: 600px;
+	background-color: white;
 	padding: 15px;
 	margin: 30px auto;
 	position: relative;
