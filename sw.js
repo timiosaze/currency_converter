@@ -23,7 +23,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
       caches.keys()
-        .then(keyList => Promise.all(keyList.map(thisCacheName => {
+        .then(keyList => Promise.all(keyList.map(keyCache => {
         if (keyCache !== cacheName){
             console.log("removing cached files", keyCache);
             return caches.delete(keyCache);        
@@ -39,9 +39,9 @@ self.addEventListener('fetch', event => {
     .then(response => response || fetch(event.request)
       .then(response => caches.open(cacheName)
         .then(cache => {
-          cache.put(event.request, response.clone());
-            return response;
-          }))
+          cache.put(event.request, response);
+            return response.clone();
+          }) 
           .catch(event => {
           console.log('error caching and fetching');
         }))
