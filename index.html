@@ -2,49 +2,35 @@
 <html>
 <head>
 	<title>Free Currency Converter | @Adegbulugbe Timilehin</title>
-	
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Yantramanav:400,500,700" rel="stylesheet">
 </head>
 <body>
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-12">
+	<div id="converter">
+		<p id="header">Currency Converter</p>
+		<div id="toConvert extra">
+			<label for="amount" id="label">Amount</label>
+			<input type="number" min="0" name="amount" id="amount" value="200">
+		</div>
+		<div id="toConvert">
+			<label for="from-curr" id="label">From</label>
+			<select id="from-curr">
 				
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-12">		
-				<div id="converter">
-					<p id="header">Currency Converter</p>
-					<div id="toConvert extra">
-						<label for="amount" id="label">Amount</label>
-						<input type="number" min="0" name="amount" id="amount" value="200">
-					</div>
-					<div id="toConvert">
-						<label for="from-curr" id="label">From</label>
-						<select id="from-curr">
-							
-						</select>
-					</div>
-					<div id="toConvert">
-						<label for="to-curr" id="label">To</label>
-						<select id="to-curr">
-							
-						</select>
-					</div>
-					<div id="Convert">
-						<button id="convertBtn">CONVERT</button>
-					</div>
-					<div id="Convert">
-						<input type="number" readonly name="converted-currency" id="con-curr" >
-					</div>
-					
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-12">
+			</select>
+		</div>
+		<div id="toConvert">
+			<label for="to-curr" id="label">To</label>
+			<select id="to-curr">
 				
-			</div>
+			</select>
+		</div>
+		<div id="Convert">
+			<button id="convertBtn">CONVERT</button>
+		</div>
+		<div id="Convert">
+			<input type="number" readonly name="converted-currency" id="con-curr" >
 		</div>
 	</div>
 	<!-- <script type="text/javascript" src="https://github.com/jakearchibald/idb/blob/master/lib/idb.js"></script> -->

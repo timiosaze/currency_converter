@@ -1,12 +1,13 @@
 const cacheName = 'cache_currency';
 
 const FilesToCache = [
-    '/',                
-    '/javascript/script.js',
-    '/javascript/jquery-1.9.1.min.js',
-    '/stylesheet/styles.css',
+    './index.html',                
+    'javascript/script.js',
+    'javascript/jquery-1.9.1.min.js',
+    'stylesheet/styles.css',
     'https://fonts.googleapis.com/css?family=Maven+Pro:900|Yantramanav:400,500,700',
-    '/stylesheet/bootstrap.min.css',
+    'stylesheet/bootstrap.min.css',
+    'https://free.currencyconverterapi.com/api/v5/currencies'
 ];
 
 self.addEventListener('install', event => {
